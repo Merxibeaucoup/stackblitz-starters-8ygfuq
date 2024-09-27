@@ -10,25 +10,25 @@ import { Component } from '@angular/core';
 })
 export class UserListComponent {
 
-  users: any[] = []; // Property to store diaries
+  users: any[] = []; 
 
 
   constructor() { }
 
   ngOnInit(): void {
-    this.loadDiaries(); // Load diaries on initialization
+    this.loadUsers(); // Load users on initialization
   }
 
-  loadDiaries(): void {
-    // Only load diaries if the URL includes 'diary'
+  loadUsers(): void {
+    // Only load diaries if the URL includes 'users'
    
-      this.users = this.getDiaries(); // Fetch the diaries
+      this.users = this.getUsers(); // Fetch the users
       if (window.location.href.includes('users')) {
       localStorage.setItem('userData', JSON.stringify(this.users)); // Set in local storage
     }
   }
 
-  getDiaries(): any[] {
+  getUsers(): any[] {
     // Mock function to simulate fetching users
     return [
         {
