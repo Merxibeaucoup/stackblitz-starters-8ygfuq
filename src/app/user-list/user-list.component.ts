@@ -20,7 +20,7 @@ export class UserListComponent {
   }
 
   loadUsers(): void {
-    // Only load diaries if the URL includes 'users'
+    // Only load users if the URL includes 'users'
    
       this.users = this.getUsers(); // Fetch the users
       if (window.location.href.includes('users')) {
